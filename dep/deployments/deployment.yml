@@ -1,0 +1,23 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: CICD application
+  labels:
+    app: CICD-app
+  namespace: my-cicd-app
+spec:
+  replicas: 3
+  selector:
+    matchLabeles:
+      app: CICD-app
+  template:
+    metadata:
+      labels:
+        app: CICD-app
+  spec:
+     containers:
+     - name: CICD-app-container
+       image: jaya1022/cicd1:16
+       ports:
+       -containerPort: 8080
