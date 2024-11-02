@@ -18,6 +18,6 @@ spec:
   spec:
      containers:
      - name: CICD-app-container
-       image: jaya1022/cicd1:{BUILD_NUMBER}
+       image: jaya1022/cicdproject:{BUILD_NUMBER}
        ports:
        -containerPort: 8080
