@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: CICD application
+  name: cicd application
   labels:
-    app: CICD-app
+    app: cicd-app
   namespace: my-cicd-app
 spec:
   replicas: 3
   selector:
     matchLabeles:
-      app: CICD-app
+      app: cicd-app
   template:
     metadata:
       labels:
-        app: CICD-app
+        app: cicd-app
   spec:
      containers:
-     - name: CICD-app-container
+     - name: cicd-app-container
        image: jaya1022/cicdproject:25
        ports:
        -containerPort: 8080
